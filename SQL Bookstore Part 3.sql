@@ -12,3 +12,10 @@ JOIN Book ON Genres.genre_id = Book.genre_id
 GROUP BY genre_name
 ORDER BY AveragePrices DESC
 LIMIT 3;
+
+# Identify the most common publication year among the books. Show the publication year and the count of books published in that year.
+
+SELECT publication_year, COUNT(book_id) AS TotalOfBooks
+FROM Book
+GROUP BY publication_year
+ORDER BY TotalOfBooks DESC;  
